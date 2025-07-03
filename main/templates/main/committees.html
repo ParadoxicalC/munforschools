@@ -1,0 +1,65 @@
+{% extends "main/base.html" %}
+{% block content %}
+<h2 class="text-2xl font-bold mb-8">Committees</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {% for committee in committees %}
+    <div class="flip-card group mx-auto" style="width:320px; height:256px; cursor:pointer;" onclick="window.location.href='{% url 'committee_detail' committee.pk %}';">
+        <div class="flip-card-inner w-full h-full">
+            <!-- Front Side -->
+            <div class="flip-card-front flex flex-col items-center justify-center bg-white rounded-lg shadow p-6 w-full h-full">
+                <img src="{{ committee.logo.url }}" alt="{{ committee.name }}" class="h-20 w-20 object-contain mb-4">
+                <h3 class="font-bold text-lg mb-2 text-center">{{ committee.name }}</h3>
+            </div>
+            <!-- Back Side -->
+            <div class="flip-card-back flex flex-col items-center justify-center bg-blue-600 text-white rounded-lg shadow p-6 w-full h-full">
+                <p class="text-base text-center">{{ committee.short_description }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<style>
+.flip-card {
+  perspective: 1200px;
+  position: relative;
+  min-width: 320px;
+  min-height: 256px;
+  width: 320px;
+  height: 256px;
+  overflow: hidden;
+  display: flex;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(.4,2,.6,1);
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.flip-card-front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+</style>
+{% endblock %}

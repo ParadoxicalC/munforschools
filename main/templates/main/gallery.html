@@ -1,0 +1,22 @@
+{% extends "main/base.html" %}
+{% block content %}
+<h2 class="text-2xl font-bold mb-8">Gallery</h2>
+<div>
+    <h3 class="text-xl font-semibold mb-4">Chapter 1 (2024)</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        {% for img in chapter1 %}
+        <a href="{{ img.image.url }}" data-lightbox="chapter1" data-title="{{ img.caption }}">
+            <img src="{{ img.image.url }}" alt="{{ img.caption }}" class="rounded shadow hover:scale-105 transition">
+        </a>
+        {% endfor %}
+    </div>
+    <h3 class="text-xl font-semibold mb-4">Chapter 2 (2025)</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {% for img in chapter2 %}
+        <a href="{{ img.image.url }}" data-lightbox="chapter2" data-title="{{ img.caption }}">
+            <img src="{{ img.image.url }}" alt="{{ img.caption }}" class="rounded shadow hover:scale-105 transition">
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

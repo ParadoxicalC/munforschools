@@ -1,0 +1,12 @@
+Dear {{ signup.name }},
+
+Thank you for signing up for MUN 4 Schools Chapter 2 (2025)!
+We are excited to have you join us.
+
+Here are some curated YouTube videos to help you prepare:
+- https://www.youtube.com/watch?v=Qiqp0w6r5zA
+- https://www.youtube.com/watch?v=QwQe6yJ6QwA
+- https://www.youtube.com/watch?v=8B1Lw8p1p6A
+
+Best regards,
+MUN 4 Schools Secretariat

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MUN 4 Schools Chapter 2 (2025)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link href="{% static 'main/tailwind.css' %}" rel="stylesheet">
+    <link rel="icon" href="{% static 'main/logo.png' %}">
+    <meta name="description" content="MUN 4 Schools Chapter 2 (2025) at The Indian Public School Erode. Model United Nations for schools.">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <header class="sticky top-0 z-50 bg-white shadow">
+        <nav class="container mx-auto flex items-center justify-between py-3 px-4">
+            <a href="{% url 'home' %}" class="flex items-center">
+                <img src="{% static 'main/logo.png' %}" alt="MUN 4 Schools Logo" class="h-10 w-auto mr-3">
+            </a>
+            <ul class="flex space-x-6 font-medium">
+                <li><a href="{% url 'home' %}" class="hover:text-blue-600">Home</a></li>
+                <li><a href="{% url 'about' %}" class="hover:text-blue-600">About</a></li>
+                <li><a href="{% url 'committees' %}" class="hover:text-blue-600">Committees</a></li>
+                <li><a href="{% url 'itinerary' %}" class="hover:text-blue-600">Itinerary</a></li>
+                <li><a href="{% url 'gallery' %}" class="hover:text-blue-600">Gallery</a></li>
+                <li><a href="{% url 'resources' %}" class="hover:text-blue-600">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container mx-auto px-4 py-8">
+        {% block content %}{% endblock %}
+    </main>
+    <footer class="bg-white border-t mt-12 py-6 text-center text-gray-500 text-sm">
+        &copy; 2025 MUN 4 Schools. All rights reserved.
+    </footer>
+    <script src="{% static 'main/lightbox.js' %}"></script>
+</body>
+</html>

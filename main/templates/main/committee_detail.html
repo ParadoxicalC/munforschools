@@ -1,0 +1,25 @@
+{% extends "main/base.html" %}
+{% block content %}
+<div class="max-w-2xl mx-auto">
+    <div class="flex items-center mb-6">
+        <img src="{{ committee.logo.url }}" alt="{{ committee.name }}" class="h-16 w-16 object-contain mr-4">
+        <div>
+            <h2 class="text-2xl font-bold">{{ committee.name }}</h2>
+            <p class="text-blue-600">{{ committee.venue }}</p>
+        </div>
+    </div>
+    <p class="mb-4"><span class="font-semibold">Agenda:</span> {{ committee.agenda }}</p>
+    <a href="{{ committee.background_guide.url }}" class="inline-block bg-blue-600 text-white px-4 py-2 rounded mb-6" download>Download Background Guide (PDF)</a>
+    <h3 class="text-xl font-semibold mb-2">Chairs</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {% for member in committee.members.all %}
+        <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
+            <img src="{{ member.photo.url }}" alt="{{ member.name }}" class="h-20 w-20 rounded-full object-cover mb-3">
+            <h4 class="font-bold">{{ member.name }}</h4>
+            <p class="text-blue-600">{{ member.role }}</p>
+            <p class="text-sm mt-2">{{ member.bio }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
