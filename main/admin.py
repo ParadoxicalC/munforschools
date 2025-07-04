@@ -16,7 +16,7 @@ class CommitteeAdmin(admin.ModelAdmin):
 
 @admin.register(ItineraryEvent)
 class ItineraryEventAdmin(admin.ModelAdmin):
-    list_display = ('day', 'time', 'title')
+    list_display = ('day', 'start_time', 'end_time', 'title')
     list_filter = ('day',)
     search_fields = ('title',)
 

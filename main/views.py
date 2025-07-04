@@ -27,8 +27,8 @@ def committee_detail(request, pk):
     return render(request, 'main/committee_detail.html', {'committee': committee})
 
 def itinerary(request):
-    days = {1: [], 2: [],}
-    for event in ItineraryEvent.objects.all():
+    days = {1: [], 2: []}
+    for event in ItineraryEvent.objects.all().order_by('day', 'start_time'):
         days[event.day].append(event)
     return render(request, 'main/itinerary.html', {'days': days})
 

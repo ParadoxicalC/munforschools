@@ -44,15 +44,16 @@ class CommitteeMember(models.Model):
 class ItineraryEvent(models.Model):
     DAY_CHOICES = [(1, 'Day 1'), (2, 'Day 2')]
     day = models.IntegerField(choices=DAY_CHOICES)
-    time = models.CharField(max_length=50)
+    start_time = models.TimeField()
+    end_time = models.TimeField()
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
 
     class Meta:
-        ordering = ['day', 'time']
+        ordering = ['day', 'start_time']
 
     def __str__(self):
-        return f"Day {self.day} - {self.time}: {self.title}"
+        return f"Day {self.day} - {self.start_time.strftime('%H:%M')} to {self.end_time.strftime('%H:%M')}: {self.title}"
 
 class GalleryImage(models.Model):
     CHAPTER_CHOICES = [(1, 'Chapter 1 (2024)'), (2, 'Chapter 2 (2025)')]
