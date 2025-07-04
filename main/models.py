@@ -42,7 +42,7 @@ class CommitteeMember(models.Model):
         return f"{self.name} ({self.role}) - {self.committee.name}"
 
 class ItineraryEvent(models.Model):
-    DAY_CHOICES = [(1, 'Day 1'), (2, 'Day 2'), (3, 'Day 3')]
+    DAY_CHOICES = [(1, 'Day 1'), (2, 'Day 2')]
     day = models.IntegerField(choices=DAY_CHOICES)
     time = models.CharField(max_length=50)
     title = models.CharField(max_length=200)
