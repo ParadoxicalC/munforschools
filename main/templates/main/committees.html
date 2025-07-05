@@ -3,16 +3,16 @@
 <h2 class="text-2xl font-bold mb-8">Committees</h2>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
     {% for committee in committees %}
-    <div class="flip-card group mx-auto" style="width:320px; height:256px; cursor:pointer;" onclick="window.location.href='{% url 'committee_detail' committee.pk %}';">
+    <div class="flip-card group mx-auto committee-card" style="width:420px; height:370px; cursor:pointer" onclick="window.location.href='{% url 'committee_detail' committee.pk %}'">
         <div class="flip-card-inner w-full h-full">
             <!-- Front Side -->
-            <div class="flip-card-front flex flex-col items-center justify-center bg-white rounded-lg shadow p-6 w-full h-full">
-                <img src="{{ committee.logo.url }}" alt="{{ committee.name }}" class="h-40 w-full rounded-xl object-cover mb-4">
-                <h3 class="font-bold text-lg mb-2 text-center">{{ committee.name }}</h3>
+            <div class="flip-card-front flex flex-col items-center justify-center bg-white rounded-lg shadow p-8 w-full h-full">
+                <img src="{{ committee.logo.url }}" alt="{{ committee.name }}" class="h-56 w-full rounded-xl object-contain mb-4">
+                <h3 class="font-bold text-xl mb-2 text-center">{{ committee.name }}</h3>
             </div>
             <!-- Back Side -->
-            <div class="flip-card-back flex flex-col items-center justify-center bg-blue-600 text-white rounded-lg shadow p-6 w-full h-full">
-                <p class="text-base text-center">{{ committee.short_description }}</p>
+            <div class="flip-card-back flex flex-col items-center justify-center bg-blue-600 text-white rounded-lg shadow p-8 w-full h-full">
+                <p class="text-lg text-center">{{ committee.short_description }}</p>
             </div>
         </div>
     </div>

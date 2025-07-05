@@ -178,6 +178,17 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hove
     transform: translateY(-4px) scale(1.03);
 }
 
+/* Modern card hover animation for all cards */
+.card-hover {
+  transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
+}
+.card-hover:hover, .card-hover:focus {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 24px 0 rgba(0,0,0,0.13);
+  z-index: 2;
+}
+
 form {
     background: #fff;
     border-radius: 1.25rem;
@@ -232,7 +243,7 @@ main, header, footer, .card, form, .scroll-to-top, .bg-white, .rounded-lg, .shad
 }
 
 .expertise-card {
-    background: #ffe44d;
+    background: #ffffff;
     color: #0a2259;
     border-radius: 1.5rem;
     padding: 2rem 2.5rem;
@@ -274,4 +285,38 @@ main, header, footer, .card, form, .scroll-to-top, .bg-white, .rounded-lg, .shad
 }
 #carousel-img {
     transition: opacity 0.6s cubic-bezier(.4,0,.2,1);
+}
+
+/* Committees Section Card Sizing Fix */
+.committee-card {
+    min-width: 340px;
+    max-width: 480px;
+    min-height: 420px;
+    padding: 2.5rem 2rem 1.5rem 2rem;
+    background: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 6px 32px #b4c0ff22, 0 2px 8px #b4c0ff11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.22s cubic-bezier(.4,0,.2,1), box-shadow 0.22s cubic-bezier(.4,0,.2,1);
+    margin-bottom: 2.5rem;
+}
+.committee-card img {
+    max-width: 90%;
+    max-height: 220px;
+    margin-bottom: 1.2rem;
+    border-radius: 0.75rem;
+    object-fit: contain;
+}
+.committee-card h4, .committee-card p {
+    text-align: center;
+    word-break: break-word;
+}
+@media (max-width: 900px) {
+    .committee-card { min-width: 220px; max-width: 100%; min-height: 320px; }
+}
+@media (max-width: 600px) {
+    .committee-card { min-width: 100%; max-width: 100%; min-height: 220px; padding: 1.2rem 0.5rem; }
 }
