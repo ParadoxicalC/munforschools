@@ -1,8 +1,199 @@
 {% extends "main/base.html" %}
+{% load static %}
 {% block content %}
-<div class="text-center py-16">
-    <h1 class="text-4xl font-bold mb-4">Welcome to MUN 4 Schools Chapter 2 (2025)</h1>
-    <p class="text-lg mb-8">The Indian Public School, Erode | Model United Nations for Schools</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjTleZBeBK7CTkJZXpXlCE0GY6kPaNG3iI5DbKk8N_uozOiA/viewform" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition" target="_blank" rel="noopener">Sign Up Now</a>
+<!-- Fullscreen Carousel Section -->
+<div class="relative w-full h-screen overflow-hidden flex items-center justify-center">
+    <img id="carousel-img" src="{% static 'main/carousel1.jpg' %}" alt="MUN 4 Schools" class="absolute inset-0 w-full h-full object-cover transition-all duration-700 z-0">
+    <div class="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
+    <!-- Carousel indicators -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+        <span class="carousel-dot w-4 h-4 bg-white rounded-full opacity-70 cursor-pointer border-2 border-blue-600" data-index="0"></span>
+        <span class="carousel-dot w-4 h-4 bg-white rounded-full opacity-70 cursor-pointer border-2 border-blue-600" data-index="1"></span>
+        <span class="carousel-dot w-4 h-4 bg-white rounded-full opacity-70 cursor-pointer border-2 border-blue-600" data-index="2"></span>
+    </div>
+    <!-- Optional: Carousel caption overlay -->
+    <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20 text-center text-white drop-shadow-xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 animate-fade-in-up">Welcome to MUN 4 Schools Chapter 2 (2025)</h1>
+        <p class="text-lg md:text-2xl mb-8 animate-fade-in-up">The Indian Public School, Erode | Model United Nations for Schools</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjTleZBeBK7CTkJZXpXlCE0GY6kPaNG3iI5DbKk8N_uozOiA/viewform" class="signup-animate inline-block bg-blue-600 text-white px-8 py-4 rounded-xl shadow-lg font-bold text-xl tracking-wide border-2 border-blue-700 hover:bg-white hover:text-blue-700 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-200" target="_blank" rel="noopener">Sign Up Now</a>
+    </div>
 </div>
+
+<!-- Five Reasons Section - Improved -->
+<section class="relative w-full flex justify-center items-center py-24" style="background: #fff1e6 !important;">
+  <div class="flex flex-col md:flex-row items-center justify-center gap-16 w-full max-w-6xl z-10">
+    <div class="bg-white p-12 rounded-3xl shadow-2xl w-full md:w-1/2 max-w-xl flex flex-col justify-center animate-fade-in-up border-4 border-[#ffb4a2]" style="min-height: 420px;">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-8 text-[#ff6f61] text-center drop-shadow-lg">Five Reasons why one must attend an MUN Conference</h2>
+      <ul class="space-y-6 text-lg md:text-xl mt-4 font-semibold">
+        <li class="flex items-center gap-4"><span class="inline-block text-3xl">🌍</span>Learn about diplomacy and the United Nations.</li>
+        <li class="flex items-center gap-4"><span class="inline-block text-3xl">🌐</span>Meet new people across the globe.</li>
+        <li class="flex items-center gap-4"><span class="inline-block text-3xl">🎤</span>Improve your public speaking skills.</li>
+        <li class="flex items-center gap-4"><span class="inline-block text-3xl">🤝</span>Learn about different cultures.</li>
+        <li class="flex items-center gap-4"><span class="inline-block text-3xl">🎉</span>Have fun and make new friends.</li>
+      </ul>
+    </div>
+    <div class="w-full md:w-1/2 flex justify-center animate-fade-in-right">
+      <img src="{% static 'main/assembly.jpg' %}" alt="MUN Conference" class="rounded-3xl shadow-2xl w-full max-w-lg object-cover border-4 border-[#ffb4a2]" style="min-height: 320px;">
+    </div>
+  </div>
+</section>
+
+<!-- Hands on Expertise Section - 4 per row grid -->
+<section class="py-24" style="background: #fff1e6 !important;">
+  <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 animate-fade-in-up" style="color:#ff6f61;">Hands on expertise</h2>
+  <div class="expertise-grid max-w-6xl mx-auto" style="margin-top:2.5rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem;">
+    <div class="expertise-card animate-pop-in" style="animation-delay:0.1s"><span class="block text-4xl mb-2">⚖️</span><span class="expertise-label">Diplomacy</span></div>
+    <div class="expertise-card animate-pop-in" style="animation-delay:0.2s"><span class="block text-4xl mb-2">🌐</span><span class="expertise-label">Fostering International Relations</span></div>
+    <div class="expertise-card animate-pop-in" style="animation-delay:0.3s"><span class="block text-4xl mb-2">💼</span><span class="expertise-label">Negotiation And Lobbying</span></div>
+    <div class="expertise-card animate-pop-in" style="animation-delay:0.4s"><span class="block text-4xl mb-2">🎤</span><span class="expertise-label">Improvisation Of Public Speaking</span></div>
+    <div class="expertise-card animate-pop-in" style="animation-delay:0.5s"><span class="block text-4xl mb-2">📝</span><span class="expertise-label">Speech Writing</span></div>
+    <div class="expertise-card animate-pop-in" style="animation-delay:0.6s"><span class="block text-4xl mb-2">🗣️</span><span class="expertise-label">Debating</span></div>
+    <div class="expertise-card animate-pop-in" style="animation-delay:0.7s"><span class="block text-4xl mb-2">🤲</span><span class="expertise-label">Culminating Teamwork</span></div>
+    <div class="expertise-card animate-pop-in" style="animation-delay:0.8s"><span class="block text-4xl mb-2">👑</span><span class="expertise-label">Leadership</span></div>
+  </div>
+</section>
+
+<style>
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+@media (max-width: 1200px) {
+  .expertise-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px) {
+  .expertise-grid { grid-template-columns: 1fr; }
+}
+/* --- Home Page Custom Styles --- */
+body {
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+.carousel-dot {
+    border-color: #ff6f61 !important;
+}
+.carousel-dot[style*="background: #ff6f61"] {
+    box-shadow: 0 0 0 4px #ff6f6133;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 0.01em;
+}
+
+h1 {
+    color: #22223b;
+    text-shadow: 0 2px 12px #ffb4a2aa;
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+h2 {
+    color: #ff6f61;
+    font-size: 2.1rem;
+    font-weight: 800;
+}
+
+.signup-animate {
+    background: linear-gradient(90deg, #ffb4a2 0%, #ff6f61 100%) !important;
+    color: #fff !important;
+    border: none !important;
+    box-shadow: 0 6px 32px #ffb4a255;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-size: 1.3rem !important;
+    letter-spacing: 0.04em;
+    padding: 1.1rem 2.5rem !important;
+    border-radius: 2rem !important;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+.signup-animate:hover {
+    background: linear-gradient(90deg, #ff6f61 0%, #ffb4a2 100%) !important;
+    color: #fff !important;
+    transform: scale(1.06) translateY(-2px);
+    box-shadow: 0 12px 32px #ffb4a299;
+}
+
+.expertise-card {
+    margin-top: 2.5rem;
+    transition: transform 0.25s cubic-bezier(.4,0,.2,1), box-shadow 0.25s cubic-bezier(.4,0,.2,1);
+    will-change: transform, box-shadow;
+    animation: blob-jump 2.2s infinite alternate cubic-bezier(.4,0,.2,1);
+}
+.expertise-card:hover {
+    animation: blob-jump-hover 0.5s cubic-bezier(.4,0,.2,1);
+    transform: translateY(-30px) scale(1.08) rotate(-2deg);
+    box-shadow: 0 16px 48px #ffb4a299, 0 2px 8px #ff6f6133;
+}
+@keyframes blob-jump {
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-10px) scale(1.04); }
+    100% { transform: translateY(0) scale(1); }
+}
+@keyframes blob-jump-hover {
+    0% { transform: translateY(0) scale(1); }
+    60% { transform: translateY(-40px) scale(1.12); }
+    100% { transform: translateY(-30px) scale(1.08) rotate(-2deg); }
+}
+.expertise-label {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    display: block;
+}
+.grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+@media (max-width: 900px) {
+    .grid-cols-4, .md\:grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+    .grid-cols-4, .md\:grid-cols-4 { grid-template-columns: 1fr; }
+}
+
+/* Section backgrounds */
+section {
+    background: #fff1e6 !important;
+}
+
+.bg-blue-900, .text-white, .text-blue-600, .border-blue-600, .border-blue-700 {
+    color: #ff6f61 !important;
+    background: transparent !important;
+    border-color: #ff6f61 !important;
+}
+
+</style>
+<script>
+// --- Carousel Fix: Use Django static paths and correct src assignment ---
+const images = [
+    "{% static 'main/carousel1.jpg' %}",
+    "{% static 'main/carousel2.jpg' %}",
+    "{% static 'main/carousel3.jpg' %}"
+];
+let idx = 0;
+document.addEventListener('DOMContentLoaded', function() {
+    const imgEl = document.getElementById('carousel-img');
+    const dots = document.querySelectorAll('.carousel-dot');
+    function show(idxToShow) {
+        idx = idxToShow;
+        imgEl.classList.add('fade-out');
+        setTimeout(() => {
+            imgEl.setAttribute('src', images[idx]);
+            dots.forEach((dot, i) => {
+                dot.style.opacity = (i === idx) ? '1' : '0.7';
+                dot.style.background = (i === idx) ? '#ff6f61' : '#fff';
+            });
+            imgEl.classList.remove('fade-out');
+            imgEl.classList.add('fade-in');
+            setTimeout(() => imgEl.classList.remove('fade-in'), 600);
+        }, 400);
+    }
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => show(i));
+    });
+    setInterval(() => {
+        show((idx + 1) % images.length);
+    }, 3500);
+    show(0);
+});
+</script>
 {% endblock %}

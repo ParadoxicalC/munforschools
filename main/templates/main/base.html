@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link href="{% static 'main/tailwind.css' %}" rel="stylesheet">
+    <link href="{% static 'main/modern.css' %}" rel="stylesheet">
     <link rel="icon" href="{% static 'main/icon.png' %}">
     <meta name="description" content="MUN 4 Schools Chapter 2 (2025) at The Indian Public School Erode. Model United Nations for schools.">
 </head>
@@ -72,5 +73,14 @@
         </div>
     </footer>
     <script src="{% static 'main/lightbox.js' %}"></script>
+    <script>
+        // Page fade-in animation on refresh
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('page-fade');
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 50);
+        });
+    </script>
 </body>
 </html>
