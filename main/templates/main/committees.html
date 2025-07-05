@@ -3,16 +3,20 @@
 <h2 class="text-2xl font-bold mb-8">Committees</h2>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
     {% for committee in committees %}
-    <div class="flip-card group mx-auto committee-card" style="width:420px; height:370px; cursor:pointer" onclick="window.location.href='{% url 'committee_detail' committee.pk %}'">
+    <div class="flip-card group mx-auto" style="width:340px; height:320px; cursor:pointer;" onclick="window.location.href='{% url 'committee_detail' committee.pk %}';">
         <div class="flip-card-inner w-full h-full">
             <!-- Front Side -->
-            <div class="flip-card-front flex flex-col items-center justify-center bg-white rounded-lg shadow p-8 w-full h-full">
-                <img src="{{ committee.logo.url }}" alt="{{ committee.name }}" class="h-56 w-full rounded-xl object-contain mb-4">
-                <h3 class="font-bold text-xl mb-2 text-center">{{ committee.name }}</h3>
+            <div class="flip-card-front flex flex-col items-center justify-center bg-white rounded-2xl shadow-lg p-4 w-full h-full transition-all duration-300 hover:shadow-2xl">
+                <div class="flex flex-col items-center justify-center w-full h-full">
+                  <div class="flex items-center justify-center w-full h-32 mb-2">
+                    <img src="{{ committee.logo.url }}" alt="{{ committee.name }}" class="h-28 w-28 object-contain rounded-xl shadow-md bg-white p-2" style="max-width:90%; max-height:7rem;">
+                  </div>
+                  <h3 class="font-extrabold text-xl mb-1 text-center text-blue-900 leading-tight truncate w-full" style="word-break:break-word;">{{ committee.name }}</h3>
+                </div>
             </div>
             <!-- Back Side -->
-            <div class="flip-card-back flex flex-col items-center justify-center bg-blue-600 text-white rounded-lg shadow p-8 w-full h-full">
-                <p class="text-lg text-center">{{ committee.short_description }}</p>
+            <div class="flip-card-back flex flex-col items-center justify-center bg-blue-600 text-white rounded-2xl shadow-lg p-6 w-full h-full">
+                <p class="text-base text-center leading-snug max-h-40 overflow-y-auto">{{ committee.short_description }}</p>
             </div>
         </div>
     </div>
@@ -22,10 +26,10 @@
 .flip-card {
   perspective: 1200px;
   position: relative;
-  min-width: 320px;
-  min-height: 256px;
-  width: 320px;
-  height: 256px;
+  min-width: 340px;
+  min-height: 320px;
+  width: 340px;
+  height: 320px;
   overflow: hidden;
   display: flex;
 }
@@ -44,7 +48,7 @@
   backface-visibility: hidden;
   width: 100%;
   height: 100%;
-  border-radius: 0.75rem;
+  border-radius: 1rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -56,10 +60,15 @@
 .flip-card-front {
   z-index: 2;
   transform: rotateY(0deg);
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(30,41,59,0.10);
 }
 .flip-card-back {
   transform: rotateY(180deg);
   z-index: 1;
+  background: linear-gradient(120deg, #2563eb 60%, #1e3a8a 100%);
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(37,99,235,0.18);
 }
 </style>
 {% endblock %}

@@ -3,20 +3,20 @@
 <h2 class="text-2xl font-bold mb-4">About MUN</h2>
 <p class="mb-6">Model United Nations (MUN) is an educational simulation where students role-play as delegates to the United Nations and simulate UN committees. It develops skills in diplomacy, negotiation, critical thinking, and public speaking.</p>
 
-<section class="my-8 p-6 rounded-lg shadow max-w-3xl mx-auto card-hover" style="background: transparent;">
+<section class="my-8 p-6 bg-white rounded-lg shadow max-w-3xl mx-auto">
     <h3 class="text-xl font-bold mb-2 text-blue-700">WHY MUN?</h3>
     <p class="mb-4">When unprecedented global issues wreak havoc, world peace is left unguarded. The ultimatum that defeats conflict and imbalance caused by global divergence happens to be a cohesive approach towards ineffective systems and practices. In bridging the polar worlds of Cohesion and Divergence, open-minded global citizens play a crucial role in crafting and delivering sustainable solutions.</p>
     <p class="mb-4">Modeling the United Nations’ efforts at global diplomacy and problem-solving, MUNs offer young leaders the opportunity to evolve as informed change-makers. This simulation offers the chance to delve into invigorating global issues and debate on policies while practicing diplomacy, leadership, problem-solving, and creativity. Beyond unleashing the inner diplomat, MUNs are an exciting way to network with equally passionate people, and make new friends, while evolving as an individual. Every MUN is a milestone in the journey of advocating for a better world, with miles of learning to cherish and take away.</p>
 </section>
 
-<section class="my-8 p-6 rounded-lg shadow max-w-3xl mx-auto card-hover" style="background: transparent;">
+<section class="my-8 p-6 bg-white rounded-lg shadow max-w-3xl mx-auto">
     <h3 class="text-xl font-bold mb-2 text-blue-700">MEET THE THEME: EVOLVING WITH SUSTENANCE</h3>
     <blockquote class="italic text-gray-600 mb-2">“Evolution is the single greatest force in the universe; it is the only thing that is permanent and drives everything.”<br><span class="block text-right">~ Raymond Thomas Dalio, American Investor</span></blockquote>
     <p class="mb-4">Change being the perpetual constant, our human instinct for survival drives us towards evolution. And with humans being the pioneers of global systems and civilizations, growth and development in social structures, policy models, legal frameworks, and institutions is a relentless occurrence, beneficial or not. The avalanche of global global issues in myriad spectrums act as catalysts for evolution by necessitating adaptive responses in technology, governance, healthcare, environment, and social structures. They drive innovation, shape policies, and influence societal values, ultimately leading to continuous transformation and progress on a global scale. But for its effects to be non-disruptive, and foster virtuous cycles of benefit rather than compromising on equity, justice, and the like, evolution does not just have to be steady but sustained and nourished by supportive lines of action, designs, and plans. In other words, evolution must be facilitated by sustainable measures that ensure that any existing damage to life, environment, or institutions does not elevate and maintain adequate diligence to meet future goals. The ‘Evolving with Sustenance’ theme encapsulates a dynamic process where individuals, systems, or even societies progress and improve when provided with the necessary sustenance, whether physical, emotional, intellectual, or environmental.</p>
     <p class="text-right font-semibold">– By Mahaa Arasi Saminathan</p>
 </section>
 
-<section class="my-8 p-6 rounded-lg shadow max-w-3xl mx-auto card-hover" style="background: transparent;">
+<section class="my-8 p-6 bg-white rounded-lg shadow max-w-3xl mx-auto">
     <h3 class="text-xl font-bold mb-2 text-blue-700">MUN at The Indian Public School, Erode</h3>
     <p class="mb-0">MUN 4 Schools is an initiative by The Indian Public School, Erode, to bring the MUN experience to school students, fostering global citizenship and leadership.</p>
 </section>
@@ -24,7 +24,7 @@
 <h3 class="text-xl font-semibold mb-4">Secretariat</h3>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
     {% for member in secretariat %}
-    <div class="rounded-lg shadow p-4 flex flex-col items-center card-hover" style="background: transparent;">
+    <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
         <img src="{{ member.photo.url }}" alt="{{ member.name }}" class="h-32 w-28 object-cover mb-3" style="border-radius: 0.75rem;">
         <h4 class="font-bold">{{ member.name }}</h4>
         <p class="text-blue-600">{{ member.role }}</p>
@@ -35,7 +35,7 @@
 <h3 class="text-xl font-semibold mb-4">Executive Board</h3>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     {% for member in eboard %}
-    <div class="rounded-lg shadow p-4 flex flex-col items-center card-hover" style="background: transparent;">
+    <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
         <img src="{{ member.photo.url }}" alt="{{ member.name }}" class="h-32 w-28 object-cover mb-3" style="border-radius: 0.75rem;">
         <h4 class="font-bold">{{ member.name }}</h4>
         <p class="text-blue-600">{{ member.role }}</p>

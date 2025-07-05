@@ -12,6 +12,10 @@
         <span class="carousel-dot w-4 h-4 bg-white rounded-full opacity-70 cursor-pointer border-2 border-blue-600" data-index="2"></span>
     </div>
 </div>
+<!-- Animated Line Separator Below Carousel -->
+<div class="w-full flex justify-center items-center" style="position:relative; z-index:15;">
+  <div class="animated-separator"></div>
+</div>
 <!-- Gap below Carousel -->
 <div class="w-full" style="height: 3.5rem;"></div>
 <!-- Welcome Section below Carousel -->
@@ -143,6 +147,27 @@ section {
     color: #000000 !important;
     background: transparent !important;
     border-color: #000000 !important;
+}
+
+/* Animated Separator Line */
+.animated-separator {
+  width: calc(95vw + 10px);
+  max-width: calc(1800px + 10px);
+  height: 8px;
+  background: linear-gradient(90deg, #1e3a8a 0%, #2563eb 30%, #3b82f6 60%, #ff6f61 100%);
+  border-radius: 6px;
+  box-shadow: 0 4px 24px #2563eb55, 0 2px 8px #ff6f6155;
+  position: relative;
+  margin-left: 0vw;
+  margin-right: -0px;
+  animation: separator-grow 1.2s cubic-bezier(.4,0,.2,1);
+  opacity: 1 !important;    
+  z-index: 15;
+}
+@keyframes separator-grow {
+  0% { width: 0; opacity: 0; }
+  60% { width: calc(95vw + 20px); opacity: 1; }
+  100% { width: calc(95vw + 20px); opacity: 1; }
 }
 
 /* Refresh Animation - Slide In */
