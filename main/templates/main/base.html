@@ -28,8 +28,48 @@
     <main class="container mx-auto px-4 py-8">
         {% block content %}{% endblock %}
     </main>
-    <footer class="bg-white border-t mt-12 py-6 text-center text-gray-500 text-sm">
-        &copy; 2025 MUN 4 Schools. All rights reserved.
+    <footer class="bg-white border-t mt-12 text-gray-800">
+        <div class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <!-- Left: Logo and School Name -->
+            <div class="flex flex-col items-center md:items-start">
+                <div class="flex items-center space-x-3 mb-2">
+                    <a href="https://theindianpublicschool.org/" target="_blank"> <img src="https://mun4schools.org/wp-content/uploads/2024/04/TIPSE-Logo-scaled.jpg" alt="" class="h-16 w-auto"></a>
+                </div>
+            </div>
+            <!-- Center: Quick Links -->
+            <div class="flex flex-col items-center">
+                <h3 class="text-yellow-500 font-bold text-lg mb-2">Quick Links</h3>
+                <nav class="flex flex-col space-y-1 text-base text-center">
+                    <a href="{% url 'home' %}" class="hover:text-blue-600">Home</a>
+                    <a href="{% url 'about' %}" class="hover:text-blue-600">About</a>
+                    <a href="{% url 'committees' %}" class="hover:text-blue-600">Committee Profile</a>
+                    <a href="{% url 'resources' %}" class="hover:text-blue-600">Resources</a>
+                    <a href="{% url 'resources' %}" class="hover:text-blue-600">Background Guides</a>
+                    <a href="{% url 'itinerary' %}" class="hover:text-blue-600">Itinerary</a>
+                    <a href="{% url 'gallery' %}" class="hover:text-blue-600">Gallery</a>
+                    <a href="mailto:mun4schools@tipse.info" class="hover:text-blue-600">Contact Us</a>
+                </nav>
+            </div>
+            <!-- Right: Contact Info -->
+            <div class="flex flex-col items-start md:items-start space-y-4 text-sm w-full">
+                <div class="flex items-center space-x-2 w-full">
+                    <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Address" style="height: 24px; width: 24px; min-width: 24px; min-height: 24px; object-fit: contain; margin-right: 5px;">
+                    <span class="text-left">The Indian Public School - IB/CAIE<br>Chennimalai Road, Senapathipalayam,<br>Goundachipalayam Post,<br>Erode 638112, Tamilnadu, India.</span>
+                </div>
+                <div class="flex items-center space-x-2 w-full">
+                    <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone" style="height: 24px; width: 24px; min-width: 24px; min-height: 24px; object-fit: contain; margin-right: 5px;">
+                    <span class="text-left">+91 9944741113<br>+91 96774 58888</span>
+                </div>
+                <div class="flex items-center space-x-2 w-full">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" style="height: 24px; width: 24px; min-width: 24px; min-height: 24px; object-fit: contain; margin-right: 10px;">
+                    <a href="mailto:mun4schools@tipse.info" class="hover:text-blue-600 underline text-left">mun4schools@tipse.info</a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-200 py-3 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 px-4">
+            <span>Copyright &copy; MUN 4 Schools</span>
+            <span>Designed By Sukir T Chellan and Agilan Sevvel</span>
+        </div>
     </footer>
     <script src="{% static 'main/lightbox.js' %}"></script>
 </body>
