@@ -3,7 +3,7 @@ Dear {{ signup.name }},
 Thank you for signing up for MUN 4 Schools Chapter 2 (2025)!
 We are excited to have you join us.
 
-To help you get started, here’s a quick crash course on MUN:
+To help you get started, here’s a few helpful videos on MUN:
 - https://www.youtube.com/watch?v=8XOVliCXYzM
 - https://www.youtube.com/watch?v=Tseu7wfGoOs
 - https://www.youtube.com/watch?v=-tVkeOU7Xg8
