@@ -1,8 +1,14 @@
 /* modern.css - Modern UI styles with scrolling animations */
 
+/* Simple dotted pattern background for all pages */
 body {
     font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-    background: #f7f9fb;
+    background-color: #fff;
+    background-image:
+        radial-gradient(rgba(30,41,59,0.08) 1.5px, transparent 1.5px),
+        radial-gradient(rgba(30,41,59,0.04) 1px, transparent 1px);
+    background-size: 28px 28px, 14px 14px;
+    background-position: 0 0, 7px 7px;
     color: #222;
     margin: 0;
     padding: 0;
@@ -274,4 +280,11 @@ main, header, footer, .card, form, .scroll-to-top, .bg-white, .rounded-lg, .shad
 }
 #carousel-img {
     transition: opacity 0.6s cubic-bezier(.4,0,.2,1);
+}
+
+/* Add gap between text cards in the about page */
+.about-cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Adjust the gap as needed */
 }
