@@ -35,8 +35,6 @@ class CommitteeMember(models.Model):
     committee = models.ForeignKey(Committee, related_name='members', on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     role = models.CharField(max_length=50, choices=[('Chair', 'Chair'), ('Vice-Chair', 'Vice-Chair')])
-    photo = models.ImageField(upload_to='committee_members/')
-    bio = models.TextField()
 
     def __str__(self):
         return f"{self.name} ({self.role}) - {self.committee.name}"
