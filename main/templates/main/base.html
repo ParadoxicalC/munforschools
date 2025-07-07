@@ -32,7 +32,7 @@
           <!-- Card 1 -->
           <!-- Card 2 -->
           <!-- Card 3 -->
-        </div>
+
     </main>
     <footer class="bg-white border-t mt-12 text-gray-800">
         <div class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
@@ -87,5 +87,30 @@
             }, 50);
         });
     </script>
+    <script>
+        // Auto-apply load-in and transition animations on page load
+document.addEventListener('DOMContentLoaded', () => {
+    // Animate nav, footer, hero, and main sections
+    document.querySelectorAll('nav, footer, .hero, .main-section').forEach(el => {
+        el.classList.add('fade-in-up');
+    });
+
+    // Animate all cards and sections with .pop-in or .fade-in-up
+    document.querySelectorAll('.card, .about-card, .committee-card, .expertise-card').forEach((el, i) => {
+        setTimeout(() => el.classList.add('pop-in'), 120 + i * 80);
+    });
+
+    // Animate staggered grids/lists
+    document.querySelectorAll('[data-animate-stagger]').forEach(grid => {
+        grid.querySelectorAll(':scope > *').forEach((el, i) => {
+            setTimeout(() => {
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+            }, 200 + i * 120);
+        });
+    });
+});
+    </script>
 </body>
 </html>
+<script src="{% static 'main/textbox-pop.js' %}"></script>
