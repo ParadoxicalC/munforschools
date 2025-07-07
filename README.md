@@ -16,8 +16,8 @@ A modern, production-ready Django website for MUN4Schools, fully manageable via 
 
 1. **Clone the repo**  
    `git clone ...`
-2. **Install Python dependencies**  
-   `pip install -r requirements.txt`
+2. **Install Python dependencies like Django and Pillow**  
+   Use `pip install` commands  to Install django and Pillow
 3. **Install Node.js dependencies for Tailwind**  
    `npm install`
 4. **Build Tailwind CSS**  
